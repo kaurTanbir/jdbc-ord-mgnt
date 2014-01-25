@@ -1,12 +1,20 @@
 apply plugin: 'java'
 apply plugin: 'idea'
 
+task tanbirsTask(dependsOn: 'clean') << {
+    println "*"*80
+    println "Nothing great but my very own task"
+    println "*"*80
+
+}
+
 group = "tanbirka.jdbc"
 version = "0.1"
 
 repositories { mavenCentral() }
 
 dependencies {
+    compile 'org.jumpmind.symmetric.jdbc:mariadb-java-client:1.1.1'
     testCompile 'junit:junit:4.10'
 }
 
